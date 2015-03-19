@@ -42,7 +42,7 @@ for i in range(0, 255)
 	let s:hex[ printf( '%02x', i ) ] = i
 endfor
 
-if has('gui_running')
+if has('gui_running') || (has("termtruecolor") && &guicolors == 1)
 	let s:is_gui = 1
 else
 	let s:is_gui = 0
